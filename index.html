@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+    <script>
+      $(document).ready(function(){
+        $("h1").css("text-align","center");
+        $("h1").css("color","blue");
+        $("h1").css("padding","16px");
+        var t,del;
+        $(".card").hover(function(){
+          t = $(this).find("h2").text();
+           $(this).find("h2").text("HELLO");
+        },function(){
+          $(this).find("h2").text(t);
+        });
+        $("tbody tr").hover(function(){
+        if(del!==this)
+            $(del).find("span").css("display","none");
+            $(this).find("span").css("display","inline");
+        },function(){
+          // setTimeout(()=>{
+            del = this;
+          // },0);
+        });
+        $(".del").click(function () {
+          var col = $(this).parent().index();
+          var row = $(this).parent().parent().index();
+          console.log("col: ",col,"\nrow: ",row);
+          $("table tbody").children().eq(row).hide(350,function () {
+            $(this).remove();
+          });
+        });
+      });
+    </script>
+    <title></title>
+  </head>
+  <body>
+      <h1 class="shadow">HEsLLO WORLD</h1>
+      <div class="container">
+        <div class="card">
+          <h2>Title 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="card">
+          <h2>Title 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="card">
+          <h2>Title 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="card">
+          <h2>Title 4</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+        <div class="table-div shadow">
+          <table width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Sr</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>Smith Shelke</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Maximus Rice</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Saul Fritz</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Shea Serrano</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Kiersten Gross</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Arielle Ball</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Harmony Noble</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Callie Boyle</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>Andres Avila</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Colby Rowe</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Patricia Ali</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20<span class="del shadow"><img src="cl.png"></img ></span><span class="add shadow"><img src="add.png"></span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer"/>
+  </body>
+</html>
